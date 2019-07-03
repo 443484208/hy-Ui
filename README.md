@@ -14,6 +14,7 @@ import hy from "vue-hy"
 Vue.use(hy);
 ```
 ## Input Attributes
+<div>
     <table border="0">
 	  <tr>
 	    <th>参数</th>
@@ -93,7 +94,10 @@ Vue.use(hy);
 	    <td>-</td>
 	  </tr>
     </table>
+</div>	
+
 ## Input Slots
+<div> 
     <table border="0">
 	  <tr>
 	    <th>name</th>
@@ -108,7 +112,10 @@ Vue.use(hy);
 	    <td>输入框尾部内容，除了textarea均有效</td>
 	  </tr>
     </table>
+</div>
+
 ## Input Events	和原生一样
+<div>
     <table border="0">
       <tr>
         <th>事件名字</th>
@@ -136,3 +143,4 @@ Vue.use(hy);
 	    <td>(event: Event)</td>
 	  </tr>
     </table>
+</div>
