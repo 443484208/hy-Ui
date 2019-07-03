@@ -3,7 +3,7 @@
 [![NPM all downloads](https://img.shields.io/npm/dt/vue-hy.svg?style=flat-square)](https://npmjs.org/package/vue-hy)
 [![NPM downloads](https://img.shields.io/npm/dm/vue-hy.svg?style=flat-square)](https://npmjs.org/package/vue-hy)
 [![NPM downloads](https://img.shields.io/npm/dw/vue-hy.svg?style=flat-square)](https://npmjs.org/package/vue-hy)
-## [试用演示]（http://panjiachen.github.io/countTo/demo/）
+## [试用演示]
 
 ## 如何使用？
 ```庆典
