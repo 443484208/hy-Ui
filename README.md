@@ -182,7 +182,7 @@ Vue.use(hy);
 	    <td>控制显示隐藏</td>
 	    <td>Boolean</td>
 	    <td>-</td>
-	    <td>-</td>
+	    <td>false</td>
 	  </tr>
 	  <tr>
 	    <td>disabled</td>
