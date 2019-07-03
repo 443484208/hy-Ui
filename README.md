@@ -5,7 +5,7 @@
 [![NPM downloads](https://img.shields.io/npm/dw/vue-hy.svg?style=flat-square)](https://npmjs.org/package/vue-hy)
 ## [试用演示]（http://panjiachen.github.io/countTo/demo/）
 
-＃＃＃ 如何使用？
+## 如何使用？
 ```庆典
 npm install vue-hy
 
@@ -13,9 +13,7 @@ import hy from "vue-hy"
 
 Vue.use(hy);
 ```
-
-<div>
-# Input Attributes
+## Input Attributes
     <table border="0">
 	  <tr>
 	    <th>参数</th>
@@ -95,7 +93,7 @@ Vue.use(hy);
 	    <td>-</td>
 	  </tr>
     </table>
-# Input Slots
+## Input Slots
     <table border="0">
 	  <tr>
 	    <th>name</th>
@@ -110,7 +108,7 @@ Vue.use(hy);
 	    <td>输入框尾部内容，除了textarea均有效</td>
 	  </tr>
     </table>
-# Input Events	和原生一样
+## Input Events	和原生一样
     <table border="0">
       <tr>
         <th>事件名字</th>
@@ -138,4 +136,3 @@ Vue.use(hy);
 	    <td>(event: Event)</td>
 	  </tr>
     </table>
-</div>
