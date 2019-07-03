@@ -1,6 +1,7 @@
 <template>
 	<div class="hy-mask" :style="maskStyle" v-if="maskShows" @click="close()">
 		<div class="hy-mask-slot" :style="contentStyle" @click="ss($event)">
+		<slot></slot>
 		</div>
 	</div>
 </template>

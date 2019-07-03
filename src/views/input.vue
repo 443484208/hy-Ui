@@ -26,7 +26,6 @@
 			};
 		},
 		mounted() {
-
 		},
 		methods: {
 			s(event) {
