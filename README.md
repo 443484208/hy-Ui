@@ -302,11 +302,39 @@ Vue.use(hy);
 	  	<td>0</td>
 	  </tr>
 	  <tr>
-	    <td>background</td>
-	    <td>选中颜色</td>
+	    <td>activeColor</td>
+	    <td>激活颜色</td>
 	  	<td>String</td>
 	  	<td>-</td>
+	  	<td>rgb(19, 206, 102)</td>
+	  </tr>
+	  <tr>
+	    <td>closeColor</td>
+	    <td>没激活颜色</td>
+	  	<td>String</td>
 	  	<td>-</td>
+	  	<td>#dcdfe6</td>
+	  </tr>
+	  <tr>
+	    <td>height</td>
+	    <td>高度，如果高宽比例没有1：2就会自动根据高度*2=宽度；如果没有标明宽度的话，宽=高*2</td>
+	  	<td>String</td>
+	  	<td>-</td>
+	  	<td>20</td>
+	  </tr>
+	  <tr>
+	    <td>width</td>
+	    <td>宽度,如果高度没设置就是宽的一半</td>
+	  	<td>String</td>
+	  	<td>-</td>
+	  	<td>40</td>
+	  </tr>
+	  <tr>
+	    <td>defaultPrevent</td>
+	    <td>true的时候高宽不会自动比例1:2，会根据你设定的高宽来</td>
+	  	<td>Boolean</td>
+	  	<td>-</td>
+	  	<td>false</td>
 	  </tr>
     </table>
 </div>

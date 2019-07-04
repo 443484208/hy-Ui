@@ -8,7 +8,7 @@
 
 			<hy-col :sm="3" :lg="4" :offset="3">4</hy-col>
 		</hy-row>
-		<hy-switch v-model="sthGiveChild"></hy-switch>
+		<hy-switch class="ss"  width='110' height="75" defaultPrevent="true" v-model="sthGiveChild"></hy-switch>
 		<h1>{{sthGiveChild}}</h1>
 	</div>
 </template>
@@ -32,8 +32,9 @@
 			hySwitch
 		},
 		created() {
-			
-
 		}
 	}
 </script>
+<style>
+	
+</style>

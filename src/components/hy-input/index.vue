@@ -9,7 +9,6 @@
 		<input :style="styleInput" :placeholder="placeholder" ref="myInput" v-if="disabled!='true'&&type!='textarea'"
 		 :maxlength="maxlength" class="hy-input" :type="type" v-model='values' @input="hyInput" @change="hyChange" @blur="hyBlur"
 		 @focus="hyFocus">
-
 		<span>
 			<span class="iconfont-input-frist iconfont-input " :style="styleFrist" v-if="(iconFrist!=null&&type!='textarea')||slotFrist=='true'">
 				<span class="iconfont" v-if="iconFrist!=null" :class="[iconFrist!=null?'icon'+iconFrist:'']"></span>
@@ -18,11 +17,10 @@
 			</span>
 			<span class="iconfont-input-end iconfont-input" :style="styleEnd" v-if="(iconEnd!=null&&type!='textarea')||slotEnd=='true'">
 				<span class="iconfont" v-if="iconEnd!=null" :class="[iconEnd!=null?'icon'+iconEnd:'']"></span>
-					<slot name="end">
+				<slot name="end">
 				</slot>
 			</span>
 		</span>
-
 	</div>
 </template>
 <script>
@@ -43,13 +41,15 @@
 		data() {
 			return {
 				values: null,
-				styleEnd: {	right: '5px'},
+				styleEnd: {
+					right: '5px'
+				},
 				styleFrist: {
 					left: '5px'
 				},
 				styleInput: {},
-				slotFrist:false,
-				slotEnd:false,
+				slotFrist: false,
+				slotEnd: false,
 			};
 		},
 		model: {
@@ -57,9 +57,8 @@
 			event: 'returnBack'
 		},
 		mounted() {
-			if (this.iconFrist != undefined && this.iconEnd != undefined) {
-
-			} else if (this.iconFrist != undefined && this.iconEnd == undefined) {
+			if (this.iconFrist != undefined && this.iconEnd != undefined) {} else if (this.iconFrist != undefined && this.iconEnd ==
+				undefined) {
 				this.styleInput = {
 					paddingLeft: '30px'
 				}
@@ -75,16 +74,14 @@
 					that.$refs.myInput.focus();
 				}, 300)
 			}
-			console.log(typeof(this.$slots))
-
-				if(this.$slots){
-				for(const a  in this.$slots){
-					if(a=='frist'){
-						var frist=document.querySelectorAll('.hy_input .iconfont-input-frist')[0].offsetWidth+10;
-						this.styleInput.paddingLeft=frist+'px';
-					}else if(a=='end'){
-						var end=document.querySelectorAll('.hy_input .iconfont-input-end')[0].offsetWidth+10;
-						this.styleInput.paddingRight=end+'px';
+			if (this.$slots) {
+				for (const a in this.$slots) {
+					if (a == 'frist') {
+						var frist = document.querySelectorAll('.hy_input .iconfont-input-frist')[0].offsetWidth + 10;
+						this.styleInput.paddingLeft = frist + 'px';
+					} else if (a == 'end') {
+						var end = document.querySelectorAll('.hy_input .iconfont-input-end')[0].offsetWidth + 10;
+						this.styleInput.paddingRight = end + 'px';
 					}
 				}
 			}

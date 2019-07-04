@@ -1,13 +1,14 @@
 <template>
-	<div :class="[col!=null?'hy-col-'+col:'',
+	<div :class="[col!=null?'hy-col-'+col:'24',
 	              offset!=null?'hy-col-offset-'+offset:'',
 				  pull!=null?'hy-col-pull-'+pull:'',
 				  push!=null?'hy-col-push-'+push:'',
-				  xs!=null?'hy-col-xs-'+xs:'',
-				  sm!=null?'hy-col-sm-'+sm:'',
-				  md!=null?'hy-col-md-'+md:'',
-				  lg!=null?'hy-col-lg-'+lg:'',
-				  xl!=null?'hy-col-xl-'+xl:'']">
+				  // xs!=null?'hy-col-xs-'+xs:'',
+				  // sm!=null?'hy-col-sm-'+sm:'',
+				  // md!=null?'hy-col-md-'+md:'',
+				  // lg!=null?'hy-col-lg-'+lg:'',
+				  // xl!=null?'hy-col-xl-'+xl:''
+				  ]">
 		<slot></slot>
 	</div>
 
