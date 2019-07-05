@@ -16,15 +16,15 @@
 	export default {
 		name:'hy-col',
 		props: {
-			col: Number,
-			offset: Number,
-			pull: Number,
-			push: Number,
-			xs: Number,
-			sm: Number,
-			md: Number,
-			lg: Number,
-			xl: Number,
+			col: [Number,String],
+			offset: [Number,String],
+			pull: [Number,String],
+			push: [Number,String],
+			xs: [Number,String],
+			sm: [Number,String],
+			md: [Number,String],
+			lg: [Number,String],
+			xl: [Number,String],
 		},
 		data() {
 			return {};

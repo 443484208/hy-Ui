@@ -339,6 +339,44 @@ Vue.use(hy);
     </table>
 </div>
 
+## hy-row
+```
+<hy-row></hy-row>
+``` 
+##### row Attributes
+<div>
+    <table border="0">
+	  <tr>
+	    <th>参数</th>
+	    <th>说明</th>
+	    <th>类型</th>
+	    <th>可选值</th>
+	    <th>默认值</th>
+	  </tr>
+	  <tr>
+	    <td>type</td>
+	    <td>是否flex布局</td>
+		<td>String</td>
+		<td>flex</td>
+		<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>justify</td>
+	    <td>flex 布局下的水平排列方式</td>
+	  	<td>String</td>
+	  	<td>start/end/center/space-around/space-between</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>align</td>
+	    <td>flex 布局下的垂直排列方式</td>
+	  	<td>top,bottom,middle</td>
+	  	<td></td>
+	  	<td>-</td>
+	  </tr>
+    </table>
+</div>
+	
 ## hy-col
 ```
 <hy-col col='11'></hy-col>
@@ -516,8 +554,4 @@ Vue.use(hy);
     </table>
 </div>
 
-## hy-switch
-```
-<hy-col><div>44</div></hy-col>
-``` 
 ##### 待续、、、、
