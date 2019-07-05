@@ -339,6 +339,183 @@ Vue.use(hy);
     </table>
 </div>
 
+## hy-col
+```
+<hy-col col='11'></hy-col>
+``` 
+##### col Attributes
+<div>
+    <table border="0">
+	  <tr>
+	    <th>参数</th>
+	    <th>说明</th>
+	    <th>类型</th>
+	    <th>可选值</th>
+	    <th>默认值</th>
+	  </tr>
+	  <tr>
+	    <td>col</td>
+	    <td>栅格占据的列数效</td>
+	  	<td>Number</td>
+	  	<td></td>
+	  	<td>24</td>
+	  </tr>
+	  <tr>
+	    <td>offset</td>
+	    <td>栅格左侧的间隔格数</td>
+	  	<td>Number</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>pull</td>
+	    <td>栅格向左移动格数</td>
+	  	<td>Number</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>push</td>
+	    <td>栅格向右移动格数</td>
+	  	<td>Number</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>xs</td>
+	    <td><768px 响应式栅格数或者栅格属性对象	</td>
+	  	<td>Number</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>sm</td>
+	    <td>≥768px 响应式栅格数或者栅格属性对象</td>
+	  	<td>Number</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>md</td>
+	    <td>≥992px 响应式栅格数或者栅格属性对象</td>
+	  	<td>Number</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>lg</td>
+	    <td>≥1200px 响应式栅格数或者栅格属性对象</td>
+	  	<td>Number</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>xl</td>
+	    <td>≥1920px 响应式栅格数或者栅格属性对象</td>
+	  	<td>Number</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+    </table>
+</div>
+
+##### col 自带样式class
+<div>
+    <table border="0">
+	  <tr>
+	    <th>参数</th>
+	    <th>说明</th>
+	    <th>类型</th>
+	    <th>可选值</th>
+	    <th>默认值</th>
+	  </tr>
+	  <tr>
+	    <td>hy-xs-none</td>
+	    <td>当视口在 xs 尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-sm-none</td>
+	    <td>当视口在 sm 尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-xs-none</td>
+	    <td>当视口在 xs 尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-sm-follow</td>
+	    <td>当视口在 sm 及以下尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-xs-up</td>
+	    <td>当视口在 sm 及以上尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-md-none</td>
+	    <td>当视口在 md 尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-md-follow</td>
+	    <td>当视口在 md 及以下尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-md-up</td>
+	    <td>当视口在 md 及以上尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-lg-none</td>
+	    <td>当视口在 lg 尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-lg-follow</td>
+	    <td>当视口在 lg 及以下尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-lg-up</td>
+	    <td>当视口在 lg 及以上尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+	  <tr>
+	    <td>hy-xl-none</td>
+	    <td>当视口在 xl 尺寸时隐藏</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  	<td>-</td>
+	  </tr>
+    </table>
+</div>
+
 ## hy-switch
 ```
 <hy-col><div>44</div></hy-col>

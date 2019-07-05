@@ -1,17 +1,16 @@
 <template>
-	<div :class="[col!=null?'hy-col-'+col:'24',
+	<div :class="[col!=null?'hy-col-'+col:'hy-col-24',
 	              offset!=null?'hy-col-offset-'+offset:'',
 				  pull!=null?'hy-col-pull-'+pull:'',
 				  push!=null?'hy-col-push-'+push:'',
-				  // xs!=null?'hy-col-xs-'+xs:'',
-				  // sm!=null?'hy-col-sm-'+sm:'',
-				  // md!=null?'hy-col-md-'+md:'',
-				  // lg!=null?'hy-col-lg-'+lg:'',
-				  // xl!=null?'hy-col-xl-'+xl:''
+				  xs!=null?'hy-xs-'+xs:'',
+				  sm!=null?'hy-sm-'+sm:'',
+				  md!=null?'hy-md-'+md:'',
+				  lg!=null?'hy-lg-'+lg:'',
+				  xl!=null?'hy-xl-'+xl:''
 				  ]">
 		<slot></slot>
 	</div>
-
 </template>
 <script>
 	export default {

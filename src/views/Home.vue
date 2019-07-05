@@ -10,6 +10,7 @@
 		</hy-row>
 		<hy-switch class="ss"  width='110' height="75" defaultPrevent="true" v-model="sthGiveChild"></hy-switch>
 		<h1>{{sthGiveChild}}</h1>
+		<div @click="ss">121</div>
 	</div>
 </template>
 
@@ -25,6 +26,11 @@
 				end: 'end',
 				sthGiveChild:0
 			};
+		},
+			methods: {
+			ss(event){
+				console.log(event.target.style.background='red')
+			}
 		},
 		components: {
 			hyCol,

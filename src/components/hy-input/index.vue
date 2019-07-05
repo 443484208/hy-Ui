@@ -21,6 +21,14 @@
 				</slot>
 			</span>
 		</span>
+		<div class="hy-input-panel">
+			<div style="height: 80%;width:100%;margin-top: 10px;background: red;">
+				h1
+			</div>
+			<div class="hy-input-arrow">
+				
+			</div>
+		</div>
 	</div>
 </template>
 <script>
@@ -137,6 +145,7 @@
 	}
 
 	.hy-input {
+		cursor: pointer;
 		border-radius: 4px;
 		border: 1px solid #dcdfe6;
 		box-sizing: border-box;
@@ -149,6 +158,31 @@
 		padding: 0 10px;
 		width: 100%;
 		transition: border-color .2s;
+	}
+	.hy-input-panel{
+		width: 100%;
+		position: relative;
+	}
+	.hy-input-arrow{
+		top: -6px;
+    left: 35px;
+		position: absolute;
+		display: block;
+    margin-right: 3px;
+    border-bottom-color: #ebeef5;
+	}
+	.hy-input-arrow:after{
+		position: absolute;
+		display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    content: " ";
+    border-width: 6px;
+    margin-left: -6px;
+    border-top-width: 0;
+    border-bottom-color: #fff;
 	}
 
 	.hy-textarea {
