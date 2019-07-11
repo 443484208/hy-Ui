@@ -21,14 +21,14 @@
 				</slot>
 			</span>
 		</span>
-		<div class="hy-input-panel">
+		<!-- <div class="hy-input-panel">
 			<div style="height: 80%;width:100%;margin-top: 10px;background: red;">
 				h1
 			</div>
 			<div class="hy-input-arrow">
 				
 			</div>
-		</div>
+		</div> -->
 	</div>
 </template>
 <script>

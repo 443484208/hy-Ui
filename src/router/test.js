@@ -33,5 +33,10 @@ export default
 			  name: 'icon',
 			   component: () => import( /* webpackChunkName: "about" */ './../views/icon.vue')
 			},
+			{
+			  path: '/demo/slider',
+			  name: 'hySlider',
+			   component: () => import( /* webpackChunkName: "about" */ './../views/hySlider.vue')
+			},
     ]
  

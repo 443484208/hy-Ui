@@ -2,6 +2,9 @@
 	<div>
 		<hy-input tyspe="textarea" autofocus="true" resize="none" placeholder="666666" maxlength="20" v-model="maskShow"
 		 @input="s" @blur="ss" @focus="sss" iconFrist="phone" iconEnd="tips">
+		 
+		 
+		 
 			<i slot="frist">123</i>
 			<i slot="frist">123</i>
 			<i slot="frist">123</i>
