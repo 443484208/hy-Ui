@@ -38,7 +38,6 @@
 				s: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 				dragStyle2: {},
 				dragStyle1: {
-
 				},
 				jj: ['30%', '60%'],
 			};
@@ -55,7 +54,6 @@
 			drags.style.left = dragsLeft + 'px';
 			slider.style.width = (dragLeft > dragsLeft ? (dragLeft - dragsLeft) : (dragsLeft - dragLeft)) + 'px';
 			slider.style.left = (dragLeft > dragsLeft ? (dragsLeft) : (dragLeft)) + 'px';
-
 		},
 		methods: {
 			ss($event) {
@@ -88,13 +86,11 @@
 							drag.style.left = $event.clientX + "px";
 							slider.style.width = dragsLeft - $event.clientX + 'px';
 							slider.style.left = $event.clientX + 'px';
-
 						} else {
 							drags.style.left = $event.clientX + "px";
 							slider.style.width = $event.clientX - dragLeft + 'px';
 							slider.style.left = dragLeft + 'px';
 						}
-
 					} else {
 						if ($event.clientX < dragsLeft) {
 							drags.style.left = $event.clientX + "px";
@@ -104,26 +100,18 @@
 							drag.style.left = $event.clientX + "px";
 							slider.style.width = $event.clientX - dragsLeft + 'px';
 							slider.style.left = dragsLeft + 'px';
-
 						} else if (($event.clientX - dragsLeft) < (dragLeft - $event.clientX)) {
 							drags.style.left = $event.clientX + "px";
 							slider.style.width = dragLeft - $event.clientX + 'px';
 							slider.style.left = $event.clientX + 'px';
-
 						} else {
 							drag.style.left = $event.clientX + "px";
 							slider.style.width = $event.clientX - dragsLeft + 'px';
 							slider.style.left = dragsLeft + 'px';
 						}
 					}
-
 					this.sliderValue = (Number(slider.style.width.replace("px", "")) / fDiv * 100).toFixed(0);
-
-					// var drag = document.getElementById('hyDrag');
-					// var slider = document.querySelector('.hy-slider-selection')
-					// 
 				}
-
 			},
 			//	拖动
 			dt() {

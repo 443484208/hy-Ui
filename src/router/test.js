@@ -21,22 +21,22 @@ export default
 			{
 			  path: '/demo/hyMask',
 			  name: 'hyMask',
-			   component: () => import( /* webpackChunkName: "about" */ './../views/mask.vue')
+			   component: () => import( /* webpackChunkName: "mask" */ './../views/mask.vue')
 			},
 			{
 			  path: '/demo/hyInput',
 			  name: 'hyInput',
-			   component: () => import( /* webpackChunkName: "about" */ './../views/input.vue')
+			   component: () => import( /* webpackChunkName: "input" */ './../views/input.vue')
 			},
 			{
 			  path: '/demo/icon',
 			  name: 'icon',
-			   component: () => import( /* webpackChunkName: "about" */ './../views/icon.vue')
+			   component: () => import( /* webpackChunkName: "icon" */ './../views/icon.vue')
 			},
 			{
 			  path: '/demo/slider',
 			  name: 'hySlider',
-			   component: () => import( /* webpackChunkName: "about" */ './../views/hySlider.vue')
+			   component: () => import( /* webpackChunkName: "hySlider" */ './../views/hySlider.vue')
 			},
     ]
  
