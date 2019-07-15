@@ -1,15 +1,11 @@
 <template>
-	<div :class="['hy-row',
-	              type=='flex'?'hy-row-type':'',
-								justify!=null?'hy-row-'+justify:'',
-								align!=null?'hy-row-'+align:'',
-								]">
+	<div :class="['hy-row',type=='flex'?'hy-row-type':'',justify!=null?'hy-row-'+justify:'',align!=null?'hy-row-'+align:'',]">
 		<slot></slot>
 	</div>
 </template>
 <script>
 	export default {
-		name:'hy-row',
+		name: 'hy-row',
 		props: {
 			type: String,
 			justify: String,
@@ -19,10 +15,8 @@
 			return {};
 		},
 		mounted() {
-
 		},
 		methods: {
-
 		},
 		watch: {},
 		components: {},
@@ -32,8 +26,5 @@
 	};
 </script>
 <style>
-@import url("../../css/col.css");
-
-
-
+	@import url("../../css/col.css");
 </style>

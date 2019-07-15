@@ -12,7 +12,7 @@
 	export default {
 		name: 'hy-switch',
 		props: {
-			give: Number,
+			give: [String, Number],
 			activeColor: String,
 			closeColor: String,
 			height: [String, Number],

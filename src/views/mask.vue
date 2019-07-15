@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<hy-mask v-model="maskShow">
-			<div>5555</div>
+			<div>54444444444444555</div>
 		</hy-mask>
 		<button @click="show">点击显示</button>
 	</div>

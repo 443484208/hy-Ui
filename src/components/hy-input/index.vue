@@ -102,6 +102,7 @@
 			hyInput(event) {
 				this.$emit('returnBack', event.target.value);
 				this.$emit('input', event.target.value);
+				this.values = this.value;
 			},
 			hyBlur(event) {
 				this.$emit('returnBack', event.target.value);
@@ -121,6 +122,10 @@
 		watch: {
 			value(value) {
 				this.values = value;
+			},
+			values(value){
+				this.$emit('returnBack', value);
+
 			}
 		},
 		components: {},

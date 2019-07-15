@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import state from './state'
-import {mutations} from './mutations'
+import {
+	mutations
+} from './mutations'
 import actions from './actions'
 import getters from './getters'
 //1使用export导出需要{}，与此相对使用import导入也需要{}

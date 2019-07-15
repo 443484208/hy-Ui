@@ -28,7 +28,7 @@
 		mounted() {},
 		methods: {
 			s(event) {
-				console.log('change:' + event)
+				console.log('change:' + event);
 			},
 			ss(event) {
 				console.log('blur:' + event)
