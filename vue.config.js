@@ -2,7 +2,7 @@ const path = require('path');
 const debug = process.env.NODE_ENV !== 'production';
 module.exports = {
 	// 基本路径
-	baseUrl: './',
+	publicPath: './',
 	// 输出文件目录
 	outputDir: 'dist',
 	assetsDir: 'assets', // 静态资源目录 (js, css, img, fonts)
