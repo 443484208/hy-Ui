@@ -8,7 +8,7 @@
 
 			<hy-col :sm="3" :lg="4" :offset="3">4</hy-col>
 		</hy-row>
-		<hy-switch class="ss"  width='110' height="75" defaultPrevent="true" v-model="sthGiveChild"></hy-switch>
+		<hy-switch class="ss" width='110' height="75" defaultPrevent="true" v-model="sthGiveChild"></hy-switch>
 		<h1>{{sthGiveChild}}</h1>
 		<div @click="ss">121</div>
 	</div>
@@ -24,12 +24,12 @@
 		data() {
 			return {
 				end: 'end',
-				sthGiveChild:0
+				sthGiveChild: 0
 			};
 		},
-			methods: {
-			ss(event){
-				console.log(event.target.style.background='red')
+		methods: {
+			ss(event) {
+				console.log(event.target.style.background = 'red')
 			}
 		},
 		components: {
@@ -37,10 +37,9 @@
 			hyRow,
 			hySwitch
 		},
-		created() {
-		}
+		created() {}
 	}
 </script>
 <style>
-	
+
 </style>

@@ -109,13 +109,13 @@
 					<div class="code-name">.icontips
 					</div>
 				</li>
-				  <li class="dib">
-				  <span class="icon iconfont iconshow"></span>
-				  <div class="name">
-				    眼睛
-				  </div>
-				  <div class="code-name">.iconshow
-				  </div>
+				<li class="dib">
+					<span class="icon iconfont iconshow"></span>
+					<div class="name">
+						眼睛
+					</div>
+					<div class="code-name">.iconshow
+					</div>
 				</li>
 
 			</ul>
@@ -134,7 +134,6 @@
 		methods: {
 
 		},
-		computed: {},
 		watch: {},
 		components: {},
 		computed: {},
@@ -145,7 +144,8 @@
 <style>
 	@import url("../font_hy/iconfont.css");
 	@import url("../font_hy/demo.css");
-	.icon_lists li{
+
+	.icon_lists li {
 		display: inline-block;
 	}
 </style>

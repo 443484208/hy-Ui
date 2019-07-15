@@ -1,6 +1,6 @@
 <template>
 	<div class="hy_input" style="position:relative;" :class="[edit==''?'':'hy-edit-input']">
-		<textarea :placeholder="placeholder" ref="myInput" :style="{		 resize:(resize)}" autosize="true" :maxlength="maxlength"
+		<textarea :placeholder="placeholder" ref="myInput" :style="{resize:(resize)}" autosize="true" :maxlength="maxlength"
 		 v-if="type=='textarea'" class="hy-textarea" v-model='values' @input="hyInput" @change="hyChange" @blur="hyBlur"
 		 @focus="hyFocus" cols="30" rows="10"></textarea>
 		<input :style="styleInput" :placeholder="placeholder" ref="myInput" v-if="disabled=='true'&&type!='textarea'" :class="[disabled=='true'?'hy-input-disabled':'']"
@@ -124,7 +124,6 @@
 			}
 		},
 		components: {},
-		computed: {},
 		updated() {},
 		created() {}
 	};
@@ -159,30 +158,33 @@
 		width: 100%;
 		transition: border-color .2s;
 	}
-	.hy-input-panel{
+
+	.hy-input-panel {
 		width: 100%;
 		position: relative;
 	}
-	.hy-input-arrow{
+
+	.hy-input-arrow {
 		top: -6px;
-    left: 35px;
+		left: 35px;
 		position: absolute;
 		display: block;
-    margin-right: 3px;
-    border-bottom-color: #ebeef5;
+		margin-right: 3px;
+		border-bottom-color: #ebeef5;
 	}
-	.hy-input-arrow:after{
+
+	.hy-input-arrow:after {
 		position: absolute;
 		display: block;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-    content: " ";
-    border-width: 6px;
-    margin-left: -6px;
-    border-top-width: 0;
-    border-bottom-color: #fff;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		content: " ";
+		border-width: 6px;
+		margin-left: -6px;
+		border-top-width: 0;
+		border-bottom-color: #fff;
 	}
 
 	.hy-textarea {

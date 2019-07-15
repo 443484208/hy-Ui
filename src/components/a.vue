@@ -4,12 +4,10 @@
 
 <script>
 	export default {
-	   props: {
-	    ss: String
-	  }
+		props: {
+			ss: String
+		}
 	}
-	
 </script>
-
 <style>
 </style>

@@ -90,7 +90,6 @@
 				}, 300)
 			}
 		},
-		computed: {},
 		watch: {
 			popupShow(value) {
 				if (value == true) {

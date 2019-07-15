@@ -24,7 +24,6 @@
 		methods: {
 
 		},
-		computed: {},
 		watch: {},
 		components: {},
 		computed: {},

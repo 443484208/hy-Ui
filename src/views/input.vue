@@ -25,8 +25,7 @@
 				slot: '666'
 			};
 		},
-		mounted() {
-		},
+		mounted() {},
 		methods: {
 			s(event) {
 				console.log('change:' + event)
@@ -38,7 +37,6 @@
 				console.log('@focus:' + event)
 			}
 		},
-		computed: {},
 		watch: {
 
 		},

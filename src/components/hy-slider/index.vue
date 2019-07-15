@@ -217,7 +217,6 @@
 				}
 			}
 		},
-		computed: {},
 		watch: {},
 		components: {},
 		computed: {},

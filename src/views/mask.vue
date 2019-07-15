@@ -8,32 +8,29 @@
 </template>
 <script>
 	import hyMask from './../components/hy-mask/index.vue'
-export default {
-	data() {
-		return {
-			maskShow:false
-		};
-	},
-	mounted() {
-		
-	},
-	methods: {
-		show(){
-			this.maskShow=true;
-		}
-	},
-  computed: {
-  },
-	watch: {
-	},
-	components: {hyMask},
-	computed: {
-	},
-  updated (){},
-  created() {}
-};
+	export default {
+		data() {
+			return {
+				maskShow: false
+			};
+		},
+		mounted() {
+
+		},
+		methods: {
+			show() {
+				this.maskShow = true;
+			}
+		},
+		watch: {},
+		components: {
+			hyMask
+		},
+		computed: {},
+		updated() {},
+		created() {}
+	};
 </script>
 <style>
-	
-</style>
 
+</style>

@@ -78,7 +78,6 @@
 				}, 100)
 			}
 		},
-		computed: {},
 		watch: {
 			maskShow(value) {
 				var that = this;

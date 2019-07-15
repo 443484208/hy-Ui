@@ -13,40 +13,35 @@
 </template>
 <script>
 	import hyPopup from './../components/hy-popup/index.vue'
-export default {
-	data() {
-		return {
-			popupShow:false,
-			direction:'left',
-			disabled:false,
-			popupWidth:500
-		};
-	},
-	mounted() {
-		
-	},
-	methods: {
-		show(){
-			this.popupShow=true;
+	export default {
+		data() {
+			return {
+				popupShow: false,
+				direction: 'left',
+				disabled: false,
+				popupWidth: 500
+			};
+		},
+		mounted() {
+
+		},
+		methods: {
+			show() {
+				this.popupShow = true;
 			},
-			clost(){
-				this.popupShow=false;
+			clost() {
+				this.popupShow = false;
 			}
-	},
-  computed: {
-  },
-	watch: {
-	},
-	components: {
-		hyPopup
-	},
-	computed: {
-	},
-  updated (){},
-  created() {}
-};
+		},
+		computed: {},
+		watch: {},
+		components: {
+			hyPopup
+		},
+		updated() {},
+		created() {}
+	};
 </script>
 <style>
-	
-</style>
 
+</style>
