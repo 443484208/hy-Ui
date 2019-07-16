@@ -45,4 +45,9 @@ export default [{
 		name: 'hyIconfont',
 		component: () => import( /* webpackChunkName: "iconfont" */ './../views/iconfont.vue')
 	},
+	{
+		path: '/demo/datePicker',
+		name: 'hyDatePicker',
+		component: () => import( /* webpackChunkName: "iconfont" */ './../views/datePicker.vue')
+	},
 ]
