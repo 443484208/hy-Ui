@@ -1,5 +1,6 @@
 <template>
 	<div class="a">
+		<h1>{{newDate}}</h1>
 		<div class="b" v-for="(item,i) in arrDate" :key="i" @click="activeDate(item)" :class="[item.type=='new'?'':'b-last',item.active==arrType?'b-b':'']">
 			{{item.i}}
 		</div>
@@ -30,17 +31,25 @@
 				var newDay = new Date(a).getDate() < 10 ? '0' + new Date(a).getDate() : new Date(a).getDate();
 				var day = this.getCountDays(a);
 				var week = new Date(newYear + '-' + newMonth).getDay();
-				var oldDay = this.getCountDays(newYear + '-' + (Number(newMonth) - 1));
+				var o=Number(newMonth)==1?(newYear-1) + '-12':(newYear+'-'+(Number(newMonth)-1))
+				var oldDay = this.getCountDays(o);
+				// var oldDay = this.getCountDays(newYear + '-' + (Number(newMonth) - 1));
 				var lastweek = new Date(newYear + '-' + newMonth + '-' + day).getDay() + 1;
 				this.newWeek(newWeek, week, day, newDay, oldDay, lastweek);
 			},
-			lastMonth(data){
-				var newDate = new Date(data);
+			lastMonth(data,day){
 				var newYear = new Date(data).getFullYear();
-				var newMonth = (new Date(data).getMonth() ) < 10 ? '0' + (new Date(data).getMonth()) : (new Date(data).getMonth());
-				var newDay = new Date(data).getDate() < 10 ? '0' + new Date(data).getDate() : new Date(data).getDate();
-				return (newYear+'-'+newMonth+'-'+newDay)
 				
+				var newMonth = (new Date(data).getMonth() ) < 10 ? '0' + (new Date(data).getMonth()) : (new Date(data).getMonth());
+				var o=Number(newMonth)==0?(newYear-1) + '-12-'+day:(newYear+'-'+newMonth+'-'+(day<10?'0'+day:day))
+
+			
+				return (o)
+			},
+			futureMonth(data,day){
+				var newYear = new Date(data).getFullYear();
+				var newMonth = (new Date(data).getMonth()+2 ) < 10 ? '0' + (new Date(data).getMonth()+2) : (new Date(data).getMonth()+2);
+				return (newYear+'-'+newMonth+'-'+(day<10?'0'+day:day))
 			},
 			newWeek(newWeek, week, day, newDay, oldDay, lastweek) {
 				var last = lastweek == 7 ? 0 : (7 - lastweek);
@@ -84,16 +93,21 @@
 				if(item.type=='new'){
 					this.arrType=item.i;
 					item.active=item.i;
-				}else{
-					console.log(this.lastMonth(this.newDate))
+				}else if(item.type=='last'){
+					this.newDate=this.lastMonth(this.newDate,item.i);
+				}else if(item.type=='future'){
+					this.newDate=this.futureMonth(this.newDate,item.i);
 				}
-				
-				
 			}
 
 		},
 		computed: {},
-		watch: {},
+		watch: {
+			newDate(value){
+				this.newDateFn(value)
+
+			}
+		},
 		components: {},
 		updated() {},
 		created() {}
