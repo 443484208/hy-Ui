@@ -9,11 +9,10 @@
 	export default {
 		name: 'hy-mask',
 		props: {
-			maskWidth: Number,
-			maskHeight: Number,
-			maskShow: Boolean,
-			disabled: Boolean,
-
+			maskWidth: [Number,String],
+			maskHeight: [Number,String],
+			maskShow: [Boolean,String],
+			disabled: [Boolean,String],
 		},
 		model: {
 			prop: 'maskShow',

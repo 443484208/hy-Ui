@@ -3,16 +3,21 @@ import popup from '../views/popup.vue'
 export default [{
 		path: '/demo/hyCol',
 		name: 'hyCol',
-		component: () => import( /* webpackChunkName: "about" */ './../components/hy-col/index.vue')
+		component: () => import( /* webpackChunkName: "col" */ './../views/hyCol.vue')
+	},
+	{
+		path: '/demo/hySwitch',
+		name: 'hySwitch',
+		component: () => import( /* webpackChunkName: "switch" */ './../views/switch.vue')
 	},
 	{
 		path: '/demo/card',
-		name: 'card',
+		name: 'hyCard',
 		component: card
 	},
 	{
 		path: '/demo/popup',
-		name: 'popup',
+		name: 'hyPopup',
 		component: popup
 	},
 	{
@@ -27,12 +32,17 @@ export default [{
 	},
 	{
 		path: '/demo/icon',
-		name: 'icon',
+		name: 'hyIcon',
 		component: () => import( /* webpackChunkName: "icon" */ './../views/icon.vue')
 	},
 	{
 		path: '/demo/slider',
 		name: 'hySlider',
-		component: () => import( /* webpackChunkName: "hySlider" */ './../views/hySlider.vue')
+		component: () => import( /* webpackChunkName: "slider" */ './../views/slider.vue')
+	},
+	{
+		path: '/demo/iconfont',
+		name: 'hyIconfont',
+		component: () => import( /* webpackChunkName: "iconfont" */ './../views/iconfont.vue')
 	},
 ]

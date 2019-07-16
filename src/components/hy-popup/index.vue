@@ -11,10 +11,10 @@
 		name: 'hy-popup',
 		props: {
 			direction: String,
-			popupWidth: Number,
-			popupHeight: Number,
-			popupShow: Boolean,
-			disabled: Boolean
+			popupWidth: [Number,String],
+			popupHeight: [Number,String],
+			popupShow: [Boolean,String],
+			disabled: [Boolean,String],
 		},
 		model: {
 			prop: 'popupShow',
