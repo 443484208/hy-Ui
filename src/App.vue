@@ -9,5 +9,5 @@
 </template>
 
 <style>
-
+	@import url("./font_hy/iconfont.css");
 </style>

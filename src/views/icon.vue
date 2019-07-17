@@ -117,6 +117,29 @@
 					<div class="code-name">.iconshow
 					</div>
 				</li>
+				<li class="dib">
+				  <span class="icon iconfont">&#xe607;</span>
+				    <div class="name">箭头双右</div>
+				    <div class="code-name">&amp;#xe607;</div>
+				  </li>
+				          
+				<li class="dib">
+				  <span class="icon iconfont">&#xe608;</span>
+				    <div class="name">箭头单右</div>
+				    <div class="code-name">&amp;#xe608;</div>
+				  </li>
+				          
+				<li class="dib">
+				  <span class="icon iconfont">&#xe609;</span>
+				    <div class="name">箭头双左</div>
+				    <div class="code-name">&amp;#xe609;</div>
+				  </li>
+				          
+				<li class="dib">
+				  <span class="icon iconfont">&#xe60a;</span>
+				    <div class="name">箭头 左</div>
+				    <div class="code-name">&amp;#xe60a;</div>
+				  </li>
 
 			</ul>
 

@@ -1,6 +1,19 @@
 <template>
 	<div class="a">
-		<h1>{{newDate}}</h1>
+		<div class="datePicker-header">
+			<div>
+				<span class="icon iconfont icon-datePicker-left" @click="jump('last','year')">&#xe609;</span>
+				<span class="icon iconfont icon-datePicker-left" @click="jump('last','month')">&#xe60a;</span>
+			</div>
+			<div style="line-height: 42px;">
+				{{newYear}}年 {{newMonth}} 月
+			</div>
+			<div>
+				<span class="icon iconfont icon-datePicker-right" @click="jump('future','month')">&#xe608;</span>
+				<span class="icon iconfont icon-datePicker-right" @click="jump('future','year')">&#xe607;</span>
+			</div>
+		</div>
+		<div class="b" v-for="(item,i) in cn" :key="i+'s'">{{item}}</div>
 		<div class="b" v-for="(item,i) in arrDate" :key="i" @click="activeDate(item)" :class="[item.type=='new'?'':'b-last',item.active==arrType?'b-b':'']">
 			{{item.i}}
 		</div>
@@ -13,13 +26,15 @@
 		data() {
 			return {
 				newDate: '2019-08-16',
+				newMonth: '8',
+				newYear: '2019',
 				arrDate: [],
-				arrType: 'aaaa'
+				arrType: 'aaaa',
+				cn: ['日', '一', '二', '三', '四', '五', '六'],
 			};
 		},
 		mounted() {
 			this.newDateFn(this.newDate)
-			console.log(this.newDate);
 		},
 		methods: {
 			newDateFn(a) {
@@ -58,13 +73,12 @@
 				var arr = [];
 				var c = oldDay - week;
 				var days = 1;
-				this.arrType = newDay;
 				for (var i = 1; i < (day + week + 1); i++) {
 					if (oldDay == c) {
 						arr.push({
 							i: days,
 							type: 'new',
-							active: days == newDay ? newDay : '',
+							active: days,
 						})
 						days = days + 1
 					} else {
@@ -83,6 +97,42 @@
 				}
 				this.arrDate = arr;
 			},
+			jump(type, item) {
+				if (type == 'last') {
+					if (item == 'year') {
+						var a = new Date(this.newDate);
+						var year = a.getFullYear() - 1
+						var month = (a.getMonth() + 1) < 10 ? '0' + (a.getMonth() + 1) : (a.getMonth() +
+							1);
+						var o = (year + '-' + month);
+						this.newDate = o;
+					} else {
+						var a = new Date(this.newDate);
+						var year = a.getMonth() == 0 ? a.getFullYear() - 1 : a.getFullYear();
+						var month = a.getMonth() == 0 ? 12 : (a.getMonth() < 10 ? '0' + a.getMonth() : a.getMonth());
+						var o = (year + '-' + month);
+						this.newDate = o;
+					}
+				} else {
+					if (item == 'year') {
+						var a = new Date(this.newDate);
+						var year = a.getFullYear() +1
+						var month = (a.getMonth() + 1) < 10 ? '0' + (a.getMonth() + 1) : (a.getMonth() +
+							1);
+						var o = (year + '-' + month);
+						this.newDate = o;
+					} else {
+						var a = new Date(this.newDate);
+						var year = a.getMonth() == 11 ? a.getFullYear() +1 : a.getFullYear();
+						var month = a.getMonth() == 11 ? '01' : (a.getMonth() < 10 ? '0' + (a.getMonth()+2 ): a.getMonth()+2);
+						var o = (year + '-' + month);
+						this.newDate = o;
+					}
+				}
+				this.arrType = '';
+
+
+			},
 			getCountDays(a = (new Date())) {
 				var year = new Date(a).getFullYear();
 				var month = new Date(a).getMonth() + 1;
@@ -95,16 +145,24 @@
 					item.active = item.i;
 				} else if (item.type == 'last') {
 					this.newDate = this.lastMonth(this.newDate, item.i);
+					this.arrType = item.i;
+
 				} else if (item.type == 'future') {
 					this.newDate = this.futureMonth(this.newDate, item.i);
+					this.arrType = item.i;
+
 				}
 			}
-
 		},
 		computed: {},
 		watch: {
 			newDate(value) {
-				this.newDateFn(value)
+				this.newDateFn(value);
+				var a = new Date(value);
+				var year = a.getFullYear();
+				var month = a.getMonth() + 1;
+				this.newMonth = month;
+				this.newYear = year;
 			}
 		},
 		components: {},
@@ -120,15 +178,15 @@
 	}
 
 	.a {
-		width: 700px;
+		width: 294px;
 	}
 
 	.b {
-		width: 100px;
-		height: 100px;
+		width: 42px;
+		height: 42px;
 		display: inline-block;
 		text-align: center;
-		line-height: 100px;
+		line-height: 42px;
 	}
 
 	.b-last {
@@ -136,8 +194,33 @@
 	}
 
 	.b-b {
-		background: red;
+		background: #409EFF;
 		border-radius: 50%;
+		color: white;
 
+	}
+
+	.icon-datePicker-left {
+		width: 42px;
+		height: 42px;
+		display: inline-block;
+		text-align: center;
+		line-height: 42px;
+		cursor: pointer;
+	}
+
+	.icon-datePicker-right {
+		width: 42px;
+		height: 42px;
+		display: inline-block;
+		text-align: center;
+		line-height: 42px;
+		cursor: pointer;
+
+	}
+
+	.datePicker-header {
+		display: flex;
+		justify-content: space-between;
 	}
 </style>
