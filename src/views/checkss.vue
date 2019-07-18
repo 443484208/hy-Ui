@@ -1,30 +1,25 @@
 <template>
 	<div>
-		<hy-card>
-			<div slot="head">
-				<span>222</span>
-			</div>
-			<div>6666</div>
-		</hy-card>
+		<hy-check></hy-check>
 	</div>
 </template>
 <script>
-	import hyCard from './../components/hy-card/index.vue'
-
+	import hyCheck from './../components/hy-checkss/index.vue'
 	export default {
 		data() {
 			return {};
 		},
 		mounted() {
+
 		},
 		methods: {
 
 		},
+		computed: {},
 		watch: {},
 		components: {
-			hyCard
+			hyCheck
 		},
-		computed: {},
 		updated() {},
 		created() {}
 	};

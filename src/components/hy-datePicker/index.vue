@@ -22,18 +22,26 @@
 <script>
 	export default {
 		name: 'hy-datePicker',
-		props: {},
+		props: {
+			value: [String, Number],
+		},
 		data() {
 			return {
-				newDate: '2019-08-16',
-				newMonth: '8',
-				newYear: '2019',
+				newDate: '',
+				newMonth: '',
+				newYear: '',
 				arrDate: [],
 				arrType: 'aaaa',
 				cn: ['日', '一', '二', '三', '四', '五', '六'],
 			};
 		},
+		model: {
+			prop: 'value',
+			event: 'returnBack'
+		},
 		mounted() {
+			this.newDate=this.value;
+			console.log(this.value)
 			this.newDateFn(this.newDate)
 		},
 		methods: {
@@ -116,22 +124,20 @@
 				} else {
 					if (item == 'year') {
 						var a = new Date(this.newDate);
-						var year = a.getFullYear() +1
+						var year = a.getFullYear() + 1
 						var month = (a.getMonth() + 1) < 10 ? '0' + (a.getMonth() + 1) : (a.getMonth() +
 							1);
 						var o = (year + '-' + month);
 						this.newDate = o;
 					} else {
 						var a = new Date(this.newDate);
-						var year = a.getMonth() == 11 ? a.getFullYear() +1 : a.getFullYear();
-						var month = a.getMonth() == 11 ? '01' : (a.getMonth() < 10 ? '0' + (a.getMonth()+2 ): a.getMonth()+2);
+						var year = a.getMonth() == 11 ? a.getFullYear() + 1 : a.getFullYear();
+						var month = a.getMonth() == 11 ? '01' : (a.getMonth() < 10 ? '0' + (a.getMonth() + 2) : a.getMonth() + 2);
 						var o = (year + '-' + month);
 						this.newDate = o;
 					}
 				}
 				this.arrType = '';
-
-
 			},
 			getCountDays(a = (new Date())) {
 				var year = new Date(a).getFullYear();
@@ -146,11 +152,9 @@
 				} else if (item.type == 'last') {
 					this.newDate = this.lastMonth(this.newDate, item.i);
 					this.arrType = item.i;
-
 				} else if (item.type == 'future') {
 					this.newDate = this.futureMonth(this.newDate, item.i);
 					this.arrType = item.i;
-
 				}
 			}
 		},
@@ -163,6 +167,11 @@
 				var month = a.getMonth() + 1;
 				this.newMonth = month;
 				this.newYear = year;
+				this.$emit('returnBack', value);
+
+			},
+			value(value){
+				this.newDate=value;
 			}
 		},
 		components: {},

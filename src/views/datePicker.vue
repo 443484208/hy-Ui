@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<hy-datePicker>
+		<hy-datePicker v-model="newDate">
 		</hy-datePicker>
+		<h1>{{newDate}}</h1>
 	</div>
 </template>
 
@@ -9,7 +10,9 @@
 	import hyDatePicker from './../components/hy-datePicker/index.vue'
 	export default {
 		data() {
-			return {}
+			return {
+				newDate:'2019-08-01'
+			}
 		},
 		mounted() {},
 		methods: {},

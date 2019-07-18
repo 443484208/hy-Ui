@@ -18,9 +18,9 @@
 			ss(event) {
 				console.log(event.target.style.background = 'red')
 			},
-			link(url){
+			link(url) {
 				this.$router.push({
-					path:url
+					path: url,
 				})
 			}
 		},
