@@ -56,7 +56,6 @@
 				} else if (this.width != undefined) {
 					this.switchDefault.height = this.width / 2;
 					this.switchDefault.width = this.width;
-					console.log("55")
 				} else if (this.height != undefined) {
 					this.switchDefault.height = this.height;
 					this.switchDefault.width = this.height * 2;

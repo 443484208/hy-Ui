@@ -46,6 +46,11 @@ export default [{
 		component: () => import( /* webpackChunkName: "iconfont" */ './../views/iconfont.vue')
 	},
 	{
+		path: '/demo/datePicker',
+		name: 'hyDatePicker',
+		component: () => import( /* webpackChunkName: "datePicker" */ './../views/datePicker.vue')
+	},
+	{
 		path: '/demo/transfer',
 		name: 'hyTransfer',
 		component: () => import( /* webpackChunkName: "transfer" */ './../views/transfer.vue')
@@ -53,16 +58,16 @@ export default [{
 	 {
 	 	path: '/demo/checkboxss',
 	 	name: 'hyCheckboxss',
-	 	component: () => import( /* webpackChunkName: "checkbox" */ './../views/checkboxss.vue')
+	 	component: () => import( /* webpackChunkName: "checkboxss" */ './../views/checkboxss.vue')
 	 },
 	 {
 	 	path: '/demo/checkss',
 	 	name: 'hyCheckss',
-	 	component: () => import( /* webpackChunkName: "check" */ './../views/checkss.vue')
+	 	component: () => import( /* webpackChunkName: "checkss" */ './../views/checkss.vue')
 	 }, 
 	 {
 	 	path: '/demo/checkboxGroupss',
 	 	name: 'hyCheckboxGroupss',
-	 	component: () => import( /* webpackChunkName: "check" */ './../views/checkboxGroupss.vue')
+	 	component: () => import( /* webpackChunkName: "checkboxGroupss" */ './../views/checkboxGroupss.vue')
 	 }, 
 ]

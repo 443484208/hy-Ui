@@ -19,7 +19,6 @@
 				end: 'end',
 			}
 		},
-
 		components: {
 			hyCol,
 			hyRow,

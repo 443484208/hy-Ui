@@ -41,8 +41,7 @@
 		},
 		mounted() {
 			this.newDate=this.value;
-			console.log(this.value)
-			this.newDateFn(this.newDate)
+			this.newDateFn(this.newDate);
 		},
 		methods: {
 			newDateFn(a) {
@@ -63,16 +62,16 @@
 				var newYear = new Date(data).getFullYear();
 				var newMonth = (new Date(data).getMonth()) < 10 ? '0' + (new Date(data).getMonth()) : (new Date(data).getMonth());
 				var o = Number(newMonth) == 0 ? (newYear - 1) + '-12-' + day : (newYear + '-' + newMonth + '-' + (day < 10 ? '0' +
-					day : day))
-				return (o)
+					day : day));
+				return (o);
 			},
 			futureMonth(data, day) {
 				var newYear = new Date(data).getFullYear();
 				var newMonth = (new Date(data).getMonth() + 2) < 10 ? '0' + (new Date(data).getMonth() + 2) : (new Date(data).getMonth() +
 					2);
 				var o = Number(newMonth) == 11 ? (newYear + 1) + '-01-' + (day < 10 ? '0' + day : day) : (newYear + '-' + newMonth +
-					'-' + (day < 10 ? '0' + day : day))
-				return (o)
+					'-' + (day < 10 ? '0' + day : day));
+				return (o);
 			},
 			newWeek(newWeek, week, day, newDay, oldDay, lastweek) {
 				week = week == 0 ? 7 : week;
@@ -93,14 +92,14 @@
 						c = c + 1;
 						arr.push({
 							i: c,
-							type: 'last'
+							type: 'last',
 						})
 					}
 				}
 				for (var j = 0; j < last; j++) {
 					arr.push({
 						i: j + 1,
-						type: 'future'
+						type: 'future',
 					});
 				}
 				this.arrDate = arr;

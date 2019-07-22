@@ -25,6 +25,7 @@
 				var ii;
 				var a;
 				var all;
+				this.$refs['.hyCheckboxGroup']
 				for (var j = 0; j < this.$parent.$parent.$children.length; j++) {
 					if (document.querySelector('.hyCheck') == this.$parent.$parent.$children[j].$el) {
 						this.$parent.$parent.$children[j].$el.__vue__.$data.a = this.a;
@@ -34,13 +35,11 @@
 					if(this.$parent.$parent.$children[j].$el==document.querySelector('.hyCheckboxGroup')){
 						var ai=0;
 						for(var i=0;i<this.$parent.$parent.$children[j].$el.children.length;i++){
-							
 							if(this.$parent.$parent.$children[j].$el.children[i].__vue__.$data.a==true){
 								ai=ai+1;
 								a=true;
 								all=ai==this.$parent.$parent.$children[j].$el.children.length?'b':'c';
 							}
-							
 						}
 					}
 				}
