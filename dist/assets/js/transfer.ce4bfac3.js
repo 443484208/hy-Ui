@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["transfer"],{"397d":function(t,n,e){"use strict";e.r(n);var c,u=function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("div")},a=[],o=e("95a9"),d=(c={data:function(){return{}},mounted:function(){},methods:{},computed:{},watch:{},components:{}},Object(o["a"])(c,"computed",{}),Object(o["a"])(c,"updated",function(){}),Object(o["a"])(c,"created",function(){}),c),r=d,i=e("17cc"),s=Object(i["a"])(r,u,a,!1,null,null,null);n["default"]=s.exports}}]);
+//# sourceMappingURL=transfer.ce4bfac3.js.map

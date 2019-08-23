@@ -17,6 +17,7 @@
 			<div>121131</div>
 			<div>121131</div>
 			<div>121131</div>
+			<slot name="transfer"></slot>
 		</div>
 	</div>
 </template>

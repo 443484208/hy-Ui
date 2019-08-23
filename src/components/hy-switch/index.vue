@@ -34,7 +34,6 @@
 			};
 		},
 		mounted() {
-			
 			if (this.defaultPrevent == 'true') {
 				this.switchDefault.height = this.height || 20;
 				this.switchDefault.width = this.width || 40;

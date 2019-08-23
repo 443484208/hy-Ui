@@ -69,7 +69,7 @@
 				var newYear = new Date(data).getFullYear();
 				var newMonth = (new Date(data).getMonth() + 2) < 10 ? '0' + (new Date(data).getMonth() + 2) : (new Date(data).getMonth() +
 					2);
-				var o = Number(newMonth) == 11 ? (newYear + 1) + '-01-' + (day < 10 ? '0' + day : day) : (newYear + '-' + newMonth +
+				var o = Number(newMonth) > 12 ? (newYear + 1) + '-01-' + (day < 10 ? '0' + day : day) : (newYear + '-' + newMonth +
 					'-' + (day < 10 ? '0' + day : day));
 				return (o);
 			},
