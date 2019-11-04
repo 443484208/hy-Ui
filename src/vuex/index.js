@@ -17,7 +17,6 @@ const store = new Vuex.Store({
 	//使用username() {
 	//				return this.$store.state.username;
 	//		}
-
 	//this.username=this.$store.state.username
 	mutations: mutations,
 	//方法
