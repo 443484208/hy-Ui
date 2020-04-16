@@ -17,6 +17,7 @@
 		<div class="b" v-for="(item,i) in arrDate" :key="i" @click="activeDate(item)" :class="[item.type=='new'?'':'b-last',item.active==arrType?'b-b':'']">
 			{{item.i}}
 		</div>
+		
 	</div>
 </template>
 <script>
@@ -33,6 +34,7 @@
 				arrDate: [],
 				arrType: 'aaaa',
 				cn: ['日', '一', '二', '三', '四', '五', '六'],
+				storage:null, 
 			};
 		},
 		model: {
@@ -40,23 +42,25 @@
 			event: 'returnBack'
 		},
 		mounted() {
-			this.newDate=this.value;
-			this.newDateFn(this.newDate);
+			this.newDate=this.value==''?(new Date()):this.value;
+			this.newDateFn(this.newDate,true);
 		},
 		methods: {
-			newDateFn(a) {
-				var newDate = new Date(a);
-				var newWeek = new Date(a);
-				var newYear = new Date(a).getFullYear();
-				var newMonth = (new Date(a).getMonth() + 1) < 10 ? '0' + (new Date(a).getMonth() + 1) : (new Date(
-					a).getMonth() + 1);
-				var newDay = new Date(a).getDate() < 10 ? '0' + new Date(a).getDate() : new Date(a).getDate();
+			newDateFn(a,b) {
+				var newDate = new Date(a)|| new Date();
+				var newWeek = new Date(a)|| new Date();
+				var newYear = newDate.getFullYear();
+				var newMonth = (newDate.getMonth() + 1) < 10 ? '0' + (newDate.getMonth() + 1) : (newDate.getMonth() + 1);
+				var newDay = newDate.getDate() < 10 ? '0' + newDate.getDate() : newDate.getDate();
 				var day = this.getCountDays(a);
 				var week = new Date(newYear + '-' + newMonth).getDay();
 				var o = Number(newMonth) == 1 ? (newYear - 1) + '-12' : (newYear + '-' + (Number(newMonth) - 1))
 				var oldDay = this.getCountDays(o);
 				var lastweek = new Date(newYear + '-' + newMonth + '-' + day).getDay() + 1;
 				this.newWeek(newWeek, week, day, newDay, oldDay, lastweek);
+				if(b){
+					this.arrType=newDay;
+				}
 			},
 			lastMonth(data, day) {
 				var newYear = new Date(data).getFullYear();
@@ -81,6 +85,7 @@
 				var c = oldDay - week;
 				var days = 1;
 				for (var i = 1; i < (day + week + 1); i++) {
+					console.log({i})
 					if (oldDay == c) {
 						arr.push({
 							i: days,
@@ -161,13 +166,15 @@
 		watch: {
 			newDate(value) {
 				this.newDateFn(value);
-				var a = new Date(value);
+				var a = new Date(value)||new Date();
 				var year = a.getFullYear();
-				var month = a.getMonth() + 1;
-				this.newMonth = month;
+				var month = (a.getMonth() + 1) < 10 ? '0' + (a.getMonth() + 1) : (a.getMonth() + 1);
+				var months = a.getMonth() + 1;
+				var day = a.getDate() < 10 ? '0' + a.getDate() : a.getDate();
+				this.newMonth = months;
 				this.newYear = year;
-				this.$emit('returnBack', value);
-
+				var val=year+'-'+month+'-'+day;
+				this.$emit('returnBack', val);
 			},
 			value(value){
 				this.newDate=value;
